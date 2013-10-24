@@ -1,0 +1,21 @@
+pt-BR:
+  hello: "Ola Mundo"
+  activerecord:
+    models:
+      user: "Usuário"
+      room: "Quarto"
+    attributes:
+      user:
+       full_name: "Nome Completo"
+       location: "Localização"
+       email: "E-Mail"
+       bio: "Biografia"
+       password: "Senha"
+       password_confirmation: "Confirme sua senha"
+      room:
+       title: Título
+       location: Localização
+       description: Descrição
+
+
+
