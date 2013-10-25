@@ -1,5 +1,33 @@
 pt-BR:
   hello: "Ola Mundo"
+  layout:
+     rooms: "Quartos" 
+     singup: "Cadastro"
+  users:
+    new:
+      title: "Cadastro de Usuário"
+    show:
+      bio: "Biografia: %{bio}"
+      edit: "Alterar Perfil"
+      title: "Perfil: %{user_name}"
+      location: "Localização: %{location}"
+  rooms:
+    index:
+      title: "Listando Quartos"
+    new:
+      title: "Cadastro de Quarto"
+    edit:
+      title: "Atualização de Cadastro de Quarto"
+  links:
+    back: "Voltar"
+    show: "Detalhar"
+    new:  "Novo"
+    edit: "Alterar"
+    destroy: "Excluir"
+  general:
+    form_error: "Ha erros no formulário, por favor verifique"
+
+
   activerecord:
     models:
       user: "Usuário"

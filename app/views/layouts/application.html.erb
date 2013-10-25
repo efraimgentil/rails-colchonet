@@ -13,14 +13,13 @@
 		<h1><%= link_to "colcho.net" , root_path %></h1>
 		<nav>
 			<ul>
-				<li><%= link_to "Quartos" , rooms_path %></li>
-				<li><%= link_to "Cadastro" , new_user_path %></li>
+				<li><%= link_to t('layout.rooms'), rooms_path %></li>
+				<li><%= link_to t('layout.singup') , new_user_path %></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 <div id="content">
-	<%= t(:hello) %>
 	<% if notice.present? %>
 		<p id="notice"><%= notice %></p>
 	<% end %>
@@ -28,7 +27,6 @@
 		<p id="alert"><%= alert %></p>
 	<% end %>
 	<%= yield %>
-</div
->
+</div>
 </body>
 </html>

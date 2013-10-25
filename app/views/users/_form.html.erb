@@ -1,7 +1,7 @@
 
 <% if @user.errors.any?%>
 	<div id="error_explanation">
-		<h2>Ha erros no formulário, por favor verifique</h2>
+		<h2><%= t 'general.form_error' %></h2>
 		<!--
 		<ul>
 			<% @user.errors.full_messages.each do |message| %>
