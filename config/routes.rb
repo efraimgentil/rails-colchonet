@@ -1,8 +1,16 @@
 Colchonet::Application.routes.draw do
-  resources :rooms
-  resources :users
+
+  LOCALE = /en|pt\-BR/
+
+  #Constains de rota, vai aceitar apenas as rotas especificadas
+  scope "(:locale)" , :locale => LOCALE do
+    resources :rooms
+    resources :users
+    resource :user_confirmation, :only => [:show]
+  end
 
 
+  match '/:locale' => 'home#index' , :locale => LOCALE , via: :get
   root :to => "home#index"
   
   # The priority is based upon order of creation: first created -> highest priority.
