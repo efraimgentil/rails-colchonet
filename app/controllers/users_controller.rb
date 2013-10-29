@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new allowed_params 
         if @user.save
+            SingupMailer.confirm_email(@user).deliver
             redirect_to @user, :notice => "Cadastro realizado com sucesso!"
         else
             render :new
