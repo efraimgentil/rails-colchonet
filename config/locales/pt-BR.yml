@@ -4,6 +4,8 @@ pt-BR:
      rooms: "Quartos" 
      singup: "Cadastro"
   users:
+    confirmations:
+      success: "Email confirmado com sucesso, obrigado!"
     new:
       title: "Cadastro de Usuário"
     show:
