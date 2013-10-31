@@ -3,6 +3,10 @@ pt-BR:
   layout:
      rooms: "Quartos" 
      singup: "Cadastro"
+  user_sessions:
+    new:
+      title: "Login"
+      sing_up: "Cadastre-se"   
   users:
     confirmations:
       success: "Email confirmado com sucesso, obrigado!"
@@ -57,6 +61,29 @@ pt-BR:
        title: Título
        location: Localização
        description: Descrição
+      user_session:
+        email: "Email"
+        passowrd: "Senha"
+  
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
 
+  flash:
+    notice:
+      signed_in: "Usuário autenticado com sucesso."
+  helpers:
+    submit:
+      create: Criar %{model} 
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+      user_session:
+        create: "Entrar"
+         
 
 
