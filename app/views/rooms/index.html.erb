@@ -1,6 +1,15 @@
 <h1><%= t '.title' %></h1>
 
-<table>
+
+<% @rooms.each do |room| %>
+  <%= render room %> 
+  <!--
+    Também é valido usar de forma explicita
+    <%= render :partial => 'room', :object => room %>
+  -->
+<% end %>
+
+<!-- <table>
   <thead>
     <tr>
       <th><%= t ('activerecord.attributes.room.title') %></th>
@@ -24,7 +33,9 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
+
+
 
 <br>
 

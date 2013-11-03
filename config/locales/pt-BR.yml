@@ -22,6 +22,10 @@ pt-BR:
       title: "Perfil: %{user_name}"
       location: "Localização: %{location}"
   rooms:
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
     index:
       title: "Listando Quartos"
     new:
@@ -84,7 +88,11 @@ pt-BR:
     notice:
       signed_in: "Usuário autenticado com sucesso."
       signed_out: "Usuário desautenticado com sucesso. Até logo!"
-      
+  
+  dialogs:
+    destroy: "Tem certeza?"
+
+
   helpers:
     submit:
       create: Criar %{model} 
