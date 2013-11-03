@@ -79,9 +79,12 @@ pt-BR:
         invalid_login: 'Usuário ou senha inválidos'
 
   flash:
+    alert:
+      needs_login: "Para acessar esse recurso você precisa estar autenticado!"
     notice:
       signed_in: "Usuário autenticado com sucesso."
       signed_out: "Usuário desautenticado com sucesso. Até logo!"
+      
   helpers:
     submit:
       create: Criar %{model} 
