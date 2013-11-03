@@ -3,6 +3,10 @@ pt-BR:
   layout:
      rooms: "Quartos" 
      singup: "Cadastro"
+     singin: "Login"
+     singout: "Logout"
+     my_profile: "Meu Perfil"
+     new_room: "Cadastre seu quarto"
   user_sessions:
     new:
       title: "Login"
@@ -77,6 +81,7 @@ pt-BR:
   flash:
     notice:
       signed_in: "Usuário autenticado com sucesso."
+      signed_out: "Usuário desautenticado com sucesso. Até logo!"
   helpers:
     submit:
       create: Criar %{model} 
