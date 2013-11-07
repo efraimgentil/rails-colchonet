@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131103224109) do
+ActiveRecord::Schema.define(version: 20131107024204) do
+
+  create_table "reviews", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["room_id"], name: "index_reviews_on_room_id"
+  add_index "reviews", ["user_id", "room_id"], name: "index_reviews_on_user_id_and_room_id", unique: true
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "rooms", force: true do |t|
     t.string   "title"
@@ -20,6 +32,7 @@ ActiveRecord::Schema.define(version: 20131103224109) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "reviews_count"
   end
 
   create_table "users", force: true do |t|

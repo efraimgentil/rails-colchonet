@@ -52,7 +52,6 @@ pt-BR:
   general:
     form_error: "Ha erros no formulário, por favor verifique"
 
-
   activerecord:
     models:
       user: "Usuário"
@@ -91,7 +90,6 @@ pt-BR:
   
   dialogs:
     destroy: "Tem certeza?"
-
 
   helpers:
     submit:

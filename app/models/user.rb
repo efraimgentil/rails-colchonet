@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 	scope :from, ->(location) { where(:location => location ) }
 	#Exemplo de uso User.from("Cidade")  ou #Exemplo de uso User.from("Cidade").limit 1
 	has_many :rooms
+	has_many :reviews
 
 	validates_presence_of :email, :full_name, :location
 	#:password
