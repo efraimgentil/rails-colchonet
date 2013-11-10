@@ -5,7 +5,7 @@ class Rooms::ReviewsController < ApplicationController
     review = room.reviews.
       find_or_initialize_by_user_id(current_user.id)
 
-    review.update_attributes!(params[:review])
+    review.update_attributes!(accepted_attributes)
 
     head :ok
   end
@@ -17,6 +17,10 @@ class Rooms::ReviewsController < ApplicationController
   private 
     def room
       @room ||= Room.find(params[:room_id])
+    end
+
+    def accepted_attributes
+      params.require(:review).permit(:points)
     end
 
 end
