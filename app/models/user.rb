@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 	scope :form_sampa, where(:location => 'São Paulo')
 	scope :from, ->(location) { where(:location => location ) }
 	#Exemplo de uso User.from("Cidade")  ou #Exemplo de uso User.from("Cidade").limit 1
-	has_many :rooms
-	has_many :reviews
+	has_many :rooms, :dependent => :destroy
+	has_many :reviews , :dependent => :destroy
 
 	validates_presence_of :email, :full_name, :location
 	#:password

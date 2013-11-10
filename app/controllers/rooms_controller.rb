@@ -4,11 +4,14 @@ class RoomsController < ApplicationController
   
 
   def index
-    @rooms = Room.most_recent
+    @rooms = Room.most_recent.map do |room|
+      RoomPresenter.new( room, self , false )
+    end
   end
 
   def show
-    @room = Room.find(params[:id])
+    room_model = Room.find(params[:id])
+    @room = RoomPresenter.new( room_model , self )
   end
 
   def new

@@ -9,34 +9,6 @@
   -->
 <% end %>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th><%= t ('activerecord.attributes.room.title') %></th>
-      <th><%= t ('activerecord.attributes.room.location') %></th>
-      <th><%= t ('activerecord.attributes.room.description') %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.title %></td>
-        <td><%= room.location %></td>
-        <td><%= room.description %></td>
-        <td><%= link_to  t('links.show') , room %></td>
-        <td><%= link_to  t('links.edit'), edit_room_path(room) %></td>
-        <td><%= link_to  t('links.destroy') , room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-
-
 <br>
 
 <%= link_to t('links.new') , new_room_path %>
